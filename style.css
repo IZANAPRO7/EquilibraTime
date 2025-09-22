@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: linear-gradient(135deg, #74ABE2, #5563DE);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.container {
+    padding: 25px;
+    width: 90%;
+    max-width: 400px;
+    background: white;
+    color: #000;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.tela {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.ativa {
+    display: block;
+    opacity: 1;
+}
+
+button {
+    margin: 6px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #007BFF;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+input,
+select {
+    margin: 8px 0;
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+li {
+    background: #f2f2f2;
+    margin: 4px 0;
+    padding: 6px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time {
+    margin: 15px 0;
+    padding: 12px;
+    border: 2px solid #007BFF;
+    border-radius: 10px;
+    background: #fafafa;
+}
+
+.jogador {
+    background: #415a77;
+    margin: 5px 0;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+#historico {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    background: #1b263b;
+    color: white;
+}
+
+.btn-remover {
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 2px 6px;
+    font-size: 12px;
+}

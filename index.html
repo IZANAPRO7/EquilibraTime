@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora no Time</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192.png">
+</head>
+
+<body>
+    <!-- TELA 1 -->
+    <div id="tela1" class="tela ativa">
+        <div class="container">
+            <h2>⚽ Adicionar Jogadores</h2>
+
+            <input type="text" id="nomeMenina" placeholder="Nome da menina">
+            <button type="button" onclick="adicionarJogador('menina')">Adicionar Menina</button>
+            <ul id="listaMeninas"></ul>
+
+            <input type="text" id="nomeMenino" placeholder="Nome do menino">
+            <button type="button" onclick="adicionarJogador('menino')">Adicionar Menino</button>
+            <ul id="listaMeninos"></ul>
+
+            <h2>Configuração dos Times</h2>
+            <label>Meninas por time:</label>
+            <select id="qtdMeninas">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+      </select><br>
+
+            <label>Meninos por time:</label>
+            <select id="qtdMeninos">
+        <option value="1">1</option>
+        <option value="2" selected>2</option>
+        <option value="3">3</option>
+      </select><br>
+
+            <button type="button" onclick="iniciarTimes()">✅ OK</button>
+        </div>
+    </div>
+
+    <!-- TELA 2 -->
+    <div id="tela2" class="tela">
+        <div class="container">
+            <h2>🏆 Times Formados</h2>
+
+            <div class="time">
+                <h3>Time 1</h3>
+                <div id="time1"></div>
+                <button type="button" onclick="sortearTime(1)">🔄 Mudar Time 1</button>
+            </div>
+
+            <div class="time">
+                <h3>Time 2</h3>
+                <div id="time2"></div>
+                <button type="button" onclick="sortearTime(2)">🔄 Mudar Time 2</button>
+            </div>
+
+            <div id="historico">
+                <h3>Histórico</h3>
+                <ul id="listaHistorico"></ul>
+            </div>
+
+            <button type="button" onclick="voltarTela1()">⬅️ Voltar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('Service Worker registrado!'))
+                .catch(err => console.log('Erro SW:', err));
+        }
+    </script>
+</body>
+
+</html>
